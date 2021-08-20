@@ -34,6 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
         Button alertDialogCustom = findViewById(R.id.alertDialogCustom);
         alertDialogCustom.setOnClickListener(clickListenerDialogCustom);
+
+        Button fragmentDialogBuilder = findViewById(R.id.fragmentDialogBuilder);
+        fragmentDialogBuilder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogBuilderFragment dialogBuilderFragment = new DialogBuilderFragment();
+                dialogBuilderFragment.show(getSupportFragmentManager(),"TAG");
+            }
+        });
+    }
+
+    public void onResultDialogFragment(String answer){
+        Log.d("mylogs", String.format("Вернуло: %s", answer));
     }
 
     private final View.OnClickListener clickListenerDialogCustom = new View.OnClickListener() {
