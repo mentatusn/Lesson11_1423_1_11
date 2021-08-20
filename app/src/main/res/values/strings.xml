@@ -22,4 +22,5 @@
 
     <string name="dialog_message">Диалог снизу</string>
     <string name="dialog">Диалог</string>
+    <string name="bottom">bottom</string>
 </resources>

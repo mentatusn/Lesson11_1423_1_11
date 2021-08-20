@@ -55,4 +55,10 @@
         android:layout_height="wrap_content"
         android:text="@string/dialog_custom" />
 
+    <Button
+        android:id="@+id/fragmentBottomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom" />
+
 </LinearLayout>

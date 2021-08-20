@@ -52,12 +52,34 @@ public class MainActivity extends AppCompatActivity {
                 dialog.show(getSupportFragmentManager(),"TAG");
             }
         });
+
+        Button fragmentBottomDialog = findViewById(R.id.fragmentBottomDialog);
+        fragmentBottomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyBottomSheetDialogFragment myBottomSheetDialogFragment = new MyBottomSheetDialogFragment();
+                myBottomSheetDialogFragment.setOnDialogListener(onDialogListener);
+                myBottomSheetDialogFragment.show(getSupportFragmentManager(),"Tag");
+            }
+        });
     }
 
     public void onResultDialogFragment(String answer){
         Log.d("mylogs", String.format("Вернуло: %s", answer));
     }
 
+    private final OnDialogListener onDialogListener = new OnDialogListener() {
+
+        @Override
+        public void pressOk() {
+            Log.d("mylogs", " pressOk");
+        }
+
+        @Override
+        public void pressNo() {
+            Log.d("mylogs", " pressNo");
+        }
+    };
     private final View.OnClickListener clickListenerDialogCustom = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

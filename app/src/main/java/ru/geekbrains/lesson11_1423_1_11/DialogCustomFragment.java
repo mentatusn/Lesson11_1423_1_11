@@ -29,6 +29,7 @@ public class DialogCustomFragment extends DialogFragment {
         initListeners();
 
         //TODO cancelable
+        setCancelable(false);
         return view;
     }
 
