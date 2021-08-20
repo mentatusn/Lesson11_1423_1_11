@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Lesson11_1423_1_11</string>
+    <string name="alert_dialog_1">Alert Dialog с одной кнопкой</string>
+    <string name="alert_dialog_3">Alert Dialog с тремя кнопками</string>
+    <string name="alert_dialog_list">Alert Dialog со списком</string>
+    <string name="alert_dialog_list_single">Alert Dialog с выбором одного</string>
+    <string name="alert_dialog_list_multi">Alert Dialog с выбором нескольких</string>
+    <string name="alert_dialog_custom_form">Alert Dialog с кастомной формой</string>
+
+    <string name="exclamation">Важное сообщение!</string>
+    <string name="message">Нажмите кнопку!</string>
+    <string name="button">КНОПКА</string>
+
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="neutral">Не знаю</string>
+
+    <string name="dialog_builder">Диалог с билдером</string>
+    <string name="dialog_custom">Диалог кастомный</string>
+    <string name="title_dialog">Введите имя</string>
+    <string name="done">готово</string>
+
+    <string name="dialog_message">Диалог снизу</string>
+    <string name="dialog">Диалог</string>
+</resources>
