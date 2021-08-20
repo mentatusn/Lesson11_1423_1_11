@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,7 +17,7 @@ public class DialogBuilderFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
-        View view = getLayoutInflater().inflate(R.layout.fragmentr_dialog_custom,null);
+        View view = getLayoutInflater().inflate(R.layout.fragment_dialog,null);
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         builder.setTitle(R.string.title_dialog)
                 .setView(view)

@@ -1,8 +1,8 @@
 package ru.geekbrains.lesson11_1423_1_11;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 dialogBuilderFragment.show(getSupportFragmentManager(),"TAG");
             }
         });
+
+        Button fragmentCustomBuilder = findViewById(R.id.fragmentCustomBuilder);
+        fragmentCustomBuilder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogCustomFragment dialog = new DialogCustomFragment();
+                dialog.show(getSupportFragmentManager(),"TAG");
+            }
+        });
     }
 
     public void onResultDialogFragment(String answer){
@@ -53,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             View frameLayout = getLayoutInflater().inflate(R.layout.dialog_custom,null);
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setView(frameLayout)
                     .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
@@ -63,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("mylogs", String.format("Вернуло: %s", editText.getText().toString()));
                         }
                     });
-            AlertDialog dialog = builder.create();
+            android.app.AlertDialog dialog = builder.create();
             dialog.show();
         }
     };
@@ -71,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
     private final View.OnClickListener clickListenerDialog1 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setMessage(R.string.message)
                     .setPositiveButton(R.string.yes, dialogListener);
-            AlertDialog dialog = builder.create();
+            android.app.AlertDialog dialog = builder.create();
             dialog.show();
         }
     };
@@ -83,13 +92,13 @@ public class MainActivity extends AppCompatActivity {
     private final View.OnClickListener clickListenerDialog3 = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setMessage(R.string.message)
                     .setPositiveButton(R.string.yes, dialogListener)
                     .setNegativeButton(R.string.no, dialogListener)
                     .setNeutralButton(R.string.neutral, dialogListener);
-            AlertDialog dialog = builder.create();
+            android.app.AlertDialog dialog = builder.create();
             dialog.show();
         }
     };
@@ -98,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             String[] variants = getResources().getStringArray(R.array.variants);
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setItems(variants, new DialogInterface.OnClickListener() {
                         @Override
@@ -106,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("mylogs", "Choose " + variants[i]);
                         }
                     });
-            AlertDialog dialog = builder.create();
+            android.app.AlertDialog dialog = builder.create();
             dialog.show();
         }
     };
@@ -116,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             String[] variants = getResources().getStringArray(R.array.variants);
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setSingleChoiceItems(variants, chosenSingle, new DialogInterface.OnClickListener() {
                         @Override
@@ -128,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton(R.string.yes, dialogListener)
                     .setNegativeButton(R.string.no, dialogListener)
                     .setNeutralButton(R.string.neutral, dialogListener);
-            AlertDialog dialog = builder.create();
+            android.app.AlertDialog dialog = builder.create();
             dialog.show();
         }
     };
@@ -138,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             String[] variants = getResources().getStringArray(R.array.variants);
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.exclamation)
                     .setMultiChoiceItems(variants, chosenMulti, new DialogInterface.OnMultiChoiceClickListener() {
                         @Override

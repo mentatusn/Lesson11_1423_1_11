@@ -49,4 +49,10 @@
         android:layout_height="wrap_content"
         android:text="@string/dialog_builder" />
 
+    <Button
+        android:id="@+id/fragmentCustomBuilder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_custom" />
+
 </LinearLayout>
